@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .counter {
+        background: #f6ff72;
+        padding: 30px;
+        text-align: center;
+        border-radius: 100px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+
+    #count {
+        font-size: 50px;
+        margin: 20px;
+        color: #333;
+        border: 2px solid #d8d7d7;
+        background: #ffffff;
+        border-radius: 50px;
+    }
+
+    button {
+        padding: 12px 20px;
+        margin: 20px 5px;
+        border:none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .increase {
+        background-color: rgb(0, 148, 0);
+        color: white;
+        font-weight: bold;
+    }
+
+    .decrease {
+        background-color: rgb(255, 57, 57);
+        color: white;
+        font-weight: bold;
+    }
+
+    .reset {
+        background-color: rgb(71, 71, 253);
+        color: white;
+    }
+    button:hover {
+        opacity: 0.8;
+    }
+
+</style>
+
+<body>
+
+    <div class="counter">
+        <h1>Counter</h1>
+
+        <div id="count">0</div>
+
+        <button class="increase" onclick="increase()">+</button>
+        <button class="decrease" onclick="decrease()">-</button>
+        <button class="reset" onclick="reset()">Reset</button>
+    </div>
+   
+    <script>
+        let count = 0;
+
+        function increase() {
+            count++;
+            document.getElementById("count").innerText = count;
+        }
+
+        function decrease() {
+            count--;
+            document.getElementById("count").innerText = count;
+        }
+
+        function reset() {
+            count = 0;
+            document.getElementById("count").innerText = count;
+        }
+
+    </script>
+
+</body>
+</html>
